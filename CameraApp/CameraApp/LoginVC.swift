@@ -70,7 +70,9 @@ class LoginVC: UIViewController {
     }
     
     @objc func login(){
-        
+        let nextVC = PhotoVC()
+        nextVC.modalPresentationStyle = .fullScreen
+        present(nextVC, animated: true, completion: nil)
     }
     
     @objc func signUp() {
