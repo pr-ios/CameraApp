@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		627BA2C92758E2D000F2EF80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627BA2C82758E2D000F2EF80 /* AppDelegate.swift */; };
 		627BA2CB2758E2D000F2EF80 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627BA2CA2758E2D000F2EF80 /* SceneDelegate.swift */; };
-		627BA2CD2758E2D000F2EF80 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627BA2CC2758E2D000F2EF80 /* ViewController.swift */; };
+		627BA2CD2758E2D000F2EF80 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627BA2CC2758E2D000F2EF80 /* LoginVC.swift */; };
 		627BA2D32758E2D000F2EF80 /* CameraApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 627BA2D12758E2D000F2EF80 /* CameraApp.xcdatamodeld */; };
 		627BA2D52758E2D200F2EF80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 627BA2D42758E2D200F2EF80 /* Assets.xcassets */; };
 		627BA2D82758E2D200F2EF80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 627BA2D62758E2D200F2EF80 /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		627BA2C52758E2D000F2EF80 /* CameraApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CameraApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		627BA2C82758E2D000F2EF80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		627BA2CA2758E2D000F2EF80 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		627BA2CC2758E2D000F2EF80 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		627BA2CC2758E2D000F2EF80 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		627BA2D22758E2D000F2EF80 /* CameraApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CameraApp.xcdatamodel; sourceTree = "<group>"; };
 		627BA2D42758E2D200F2EF80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		627BA2D72758E2D200F2EF80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 			children = (
 				627BA2C82758E2D000F2EF80 /* AppDelegate.swift */,
 				627BA2CA2758E2D000F2EF80 /* SceneDelegate.swift */,
-				627BA2CC2758E2D000F2EF80 /* ViewController.swift */,
+				627BA2CC2758E2D000F2EF80 /* LoginVC.swift */,
 				627BA2D42758E2D200F2EF80 /* Assets.xcassets */,
 				627BA2D62758E2D200F2EF80 /* LaunchScreen.storyboard */,
 				627BA2D92758E2D200F2EF80 /* Info.plist */,
@@ -138,7 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				627BA2D32758E2D000F2EF80 /* CameraApp.xcdatamodeld in Sources */,
-				627BA2CD2758E2D000F2EF80 /* ViewController.swift in Sources */,
+				627BA2CD2758E2D000F2EF80 /* LoginVC.swift in Sources */,
 				627BA2C92758E2D000F2EF80 /* AppDelegate.swift in Sources */,
 				627BA2CB2758E2D000F2EF80 /* SceneDelegate.swift in Sources */,
 			);
