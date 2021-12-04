@@ -8,7 +8,9 @@
 import UIKit
 
 class LoginVC: UIViewController {
- 
+    
+    // Properties
+    
     let logo = UIImageView()
     let mainLabel = UILabel()
     let usernameField = UITextField()
@@ -25,6 +27,7 @@ class LoginVC: UIViewController {
         hideKeyboardWhenTappedAround()
         
         // AppName
+       
         mainLabel.text = "Camera App"
         mainLabel.textColor = #colorLiteral(red: 0.401073277, green: 0.7664145827, blue: 0.6784854531, alpha: 1)
         mainLabel.font = .systemFont(ofSize: 40, weight: .semibold)
@@ -33,14 +36,15 @@ class LoginVC: UIViewController {
         
         // Logo
         
-        logo.frame = CGRect(x: 130, y: 300, width: 150, height: 150)
+        logo.frame = CGRect(x: 160, y: 150, width: 100, height: 100)
         logo.image = UIImage(named: "logo")
         view.addSubview(logo)
 
         //UserName
+        
         usernameField.borderStyle = .roundedRect
         usernameField.placeholder = "Please enter your username"
-        usernameField.frame = CGRect(x: 70, y: 600, width: 300, height: 40)
+        usernameField.frame = CGRect(x: 15, y: 300, width: 400, height: 40)
         view.addSubview(usernameField)
         
         // Password
@@ -48,45 +52,47 @@ class LoginVC: UIViewController {
         passwordField.borderStyle = .roundedRect
         passwordField.placeholder = "Please enter your password"
         passwordField.isSecureTextEntry = true
-        passwordField.frame = CGRect(x: 70, y: 650, width: 300, height: 40)
+        passwordField.frame = CGRect(x: 15, y: 350, width: 400, height: 40)
         view.addSubview(passwordField)
         
         // LoginButton
         
         loginButton.setTitle("Login", for: .normal)
-        loginButton.setTitleColor(#colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1), for: .normal)
+        loginButton.setTitleColor( .white, for: .normal)
         loginButton.backgroundColor = #colorLiteral(red: 0.401073277, green: 0.7664145827, blue: 0.6784854531, alpha: 1)
-        loginButton.frame = CGRect(x: 150, y: 700, width: 130, height: 40)
+        loginButton.frame = CGRect(x: 15, y: 490, width: 400, height: 40)
         loginButton.layer.cornerRadius = 15
+        loginButton.titleLabel?.font = .systemFont(ofSize: 20, weight: .semibold)
         loginButton.addTarget(self, action: #selector(login) , for: .touchUpInside)
         view.addSubview(loginButton)
         
         //TextEmpty
         
-        textEmpty.frame = CGRect(x: 50, y: 740, width: 350, height: 30)
+        textEmpty.frame = CGRect(x: 50, y: 450, width: 350, height: 30)
         textEmpty.textColor = .red
         view.addSubview(textEmpty)
         
         // SignUpLabel
         
         signUpLabel.text = "You don't have an account?"
-        signUpLabel.textColor = #colorLiteral(red: 0.401073277, green: 0.7664145827, blue: 0.6784854531, alpha: 1)
         signUpLabel.font = .systemFont(ofSize: 17, weight: .regular)
-        signUpLabel.frame = CGRect(x: 30, y: 750, width: 300, height: 60)
+        signUpLabel.frame = CGRect(x: 30, y: 400, width: 300, height: 60)
         signUpLabel.textAlignment = .center
         view.addSubview(signUpLabel)
         
         // SignUpButton
+        
         signUpButton.setTitle("SignUp", for: .normal)
         signUpButton.setTitleColor(#colorLiteral(red: 0.401073277, green: 0.7664145827, blue: 0.6784854531, alpha: 1), for: .normal)
-        signUpButton.frame = CGRect(x: 255, y: 760, width: 130, height: 40)
-        signUpButton.layer.cornerRadius = 10
-        signUpButton.addTarget(self, action: #selector(signUp) , for: .touchUpInside)
+        signUpButton.frame = CGRect(x: 260, y: 410, width: 130, height: 40)
         signUpButton.titleLabel?.font = .systemFont(ofSize: 20, weight: .bold)
+        signUpButton.addTarget(self, action: #selector(signUp), for: .touchUpInside)
         view.addSubview(signUpButton)
         
         
     }
+    
+    //Functions
     
     @objc func login(){
         
@@ -105,9 +111,15 @@ class LoginVC: UIViewController {
     
     @objc func signUp() {
         
+        let vc = SignUpVC()
+        vc.modalTransitionStyle = .coverVertical
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
     }
     
 }
+
+// Extensions
 
 extension UIImageView {
 
@@ -129,4 +141,5 @@ extension UIViewController {
         view.endEditing(true)
     }
 }
+
 

@@ -9,11 +9,9 @@ import UIKit
 
 class PhotoVC: UIViewController {
 
-    var nameLable = UILabel()
-    
-    var showImage = UIImageView()
-    
-    var takePicBtn = UIButton()
+    let nameLable = UILabel()
+    let showImage = UIImageView()
+    let takePicBtn = UIButton()
     
     
     override func viewDidLoad() {
@@ -21,13 +19,13 @@ class PhotoVC: UIViewController {
         view.backgroundColor = .white
         
         // name lable
+        
         nameLable.frame = CGRect(x: 50, y: 70, width: 350, height: 100)
         nameLable.textColor = #colorLiteral(red: 0.401060462, green: 0.7664279342, blue: 0.6784901619, alpha: 0.8980392157)
         nameLable.textAlignment = .center
         nameLable.numberOfLines = 0
         nameLable.font = .systemFont(ofSize: 40)
         nameLable.text = ""
-//        nameLable.sizeToFit()
         view.addSubview(nameLable)
 
         // image view
@@ -44,7 +42,7 @@ class PhotoVC: UIViewController {
         takePicBtn.setTitle("Take a picture", for: .normal)
         takePicBtn.backgroundColor = #colorLiteral(red: 0.401060462, green: 0.7664279342, blue: 0.6784901619, alpha: 0.8980392157)
         takePicBtn.layer.cornerRadius = 15
-        takePicBtn.titleLabel?.font = .systemFont(ofSize: 20)
+        takePicBtn.titleLabel?.font = .systemFont(ofSize: 20, weight: .semibold)
         takePicBtn.addTarget(self, action: #selector(takePicture), for: .touchDown)
         view.addSubview(takePicBtn)
     }

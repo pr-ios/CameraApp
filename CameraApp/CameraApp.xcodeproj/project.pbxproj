@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		621C824127590DE000E15956 /* PhotoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621C824027590DE000E15956 /* PhotoVC.swift */; };
+		6274029E275C042A00BDA4E2 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6274029D275C042A00BDA4E2 /* SignUpVC.swift */; };
 		627BA2C92758E2D000F2EF80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627BA2C82758E2D000F2EF80 /* AppDelegate.swift */; };
 		627BA2CB2758E2D000F2EF80 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627BA2CA2758E2D000F2EF80 /* SceneDelegate.swift */; };
 		627BA2CD2758E2D000F2EF80 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627BA2CC2758E2D000F2EF80 /* LoginVC.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		621C824027590DE000E15956 /* PhotoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoVC.swift; sourceTree = "<group>"; };
+		6274029D275C042A00BDA4E2 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		627BA2C52758E2D000F2EF80 /* CameraApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CameraApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		627BA2C82758E2D000F2EF80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		627BA2CA2758E2D000F2EF80 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			children = (
 				627BA2C82758E2D000F2EF80 /* AppDelegate.swift */,
 				627BA2CA2758E2D000F2EF80 /* SceneDelegate.swift */,
+				6274029D275C042A00BDA4E2 /* SignUpVC.swift */,
 				627BA2CC2758E2D000F2EF80 /* LoginVC.swift */,
 				621C824027590DE000E15956 /* PhotoVC.swift */,
 				627BA2D42758E2D200F2EF80 /* Assets.xcassets */,
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6274029E275C042A00BDA4E2 /* SignUpVC.swift in Sources */,
 				627BA2D32758E2D000F2EF80 /* CameraApp.xcdatamodeld in Sources */,
 				627BA2CD2758E2D000F2EF80 /* LoginVC.swift in Sources */,
 				627BA2C92758E2D000F2EF80 /* AppDelegate.swift in Sources */,
