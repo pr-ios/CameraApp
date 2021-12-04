@@ -16,7 +16,7 @@ class LoginVC: UIViewController {
     let loginButton = UIButton()
     let signUpLabel = UILabel()
     let signUpButton = UIButton()
-    
+    let textEmpty = UILabel()
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -58,6 +58,11 @@ class LoginVC: UIViewController {
         loginButton.addTarget(self, action: #selector(login) , for: .touchUpInside)
         view.addSubview(loginButton)
         
+        //TextEmpty
+        textEmpty.frame = CGRect(x: 50, y: 740, width: 350, height: 30)
+        textEmpty.textColor = .red
+        view.addSubview(textEmpty)
+        
         // SignUpLabel
         
         signUpLabel.text = "You don't have an account?"
@@ -89,8 +94,8 @@ class LoginVC: UIViewController {
             present(nextVC, animated: true, completion: nil)
             nextVC.nameLable.text = "Welcome " + usernameField.text!
                         
-        } else {
-            
+        } else if usernameField.state.isEmpty == true {
+            textEmpty.text = "Please make sure you enter your username"
         }
     }
     
