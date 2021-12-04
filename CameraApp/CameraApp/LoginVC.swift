@@ -86,7 +86,7 @@ class LoginVC: UIViewController {
     }
     
     @objc func login(){
-        if usernameField.text!.isEmpty == false && passwordField.text!.isEmpty == false {
+        if usernameField.text!.isEmpty == false || passwordField.text!.isEmpty == false {
            
         
             let nextVC = PhotoVC()
