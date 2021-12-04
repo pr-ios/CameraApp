@@ -20,7 +20,7 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        self.hideKeyboardWhenTappedAround()
+        hideKeyboardWhenTappedAround()
         // AppName
         mainLabel.text = "Camera App"
         mainLabel.textColor = #colorLiteral(red: 0.401073277, green: 0.7664145827, blue: 0.6784854531, alpha: 1)
@@ -86,14 +86,14 @@ class LoginVC: UIViewController {
     }
     
     @objc func login(){
-        if usernameField.text!.isEmpty == false || passwordField.text!.isEmpty == false {
-           
         
+        if usernameField.text!.isEmpty == false && passwordField.text!.isEmpty == false {
+           
             let nextVC = PhotoVC()
-            nextVC.modalTransitionStyle = .partialCurl
+            nextVC.modalTransitionStyle = .coverVertical
             nextVC.modalPresentationStyle = .fullScreen
             present(nextVC, animated: true, completion: nil)
-            nextVC.nameLable.text = "Welcome " + usernameField.text!
+            nextVC.nameLable.text = "Welcome \(usernameField.text!)"
                         
         } else {
             textEmpty.text = "Please make sure you enter your username"
@@ -121,7 +121,7 @@ extension UIViewController {
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
     }
-    
+
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }

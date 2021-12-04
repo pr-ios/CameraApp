@@ -21,13 +21,13 @@ class PhotoVC: UIViewController {
         view.backgroundColor = .white
         
         // name lable
-        nameLable.frame = CGRect(x: 50, y: 100, width: 200, height: 40)
+        nameLable.frame = CGRect(x: 50, y: 70, width: 350, height: 100)
         nameLable.textColor = #colorLiteral(red: 0.401060462, green: 0.7664279342, blue: 0.6784901619, alpha: 0.8980392157)
         nameLable.textAlignment = .center
         nameLable.numberOfLines = 0
-        nameLable.font = .systemFont(ofSize: 20)
-        nameLable.text = "The legend"
-        nameLable.sizeToFit()
+        nameLable.font = .systemFont(ofSize: 40)
+        nameLable.text = ""
+//        nameLable.sizeToFit()
         view.addSubview(nameLable)
 
         // image view

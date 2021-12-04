@@ -13,6 +13,7 @@ class LaunchVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         view.addSubview(logoLC)
         view.backgroundColor = .white
         logoLC.image = UIImage(named: "logo")
@@ -33,7 +34,7 @@ class LaunchVC: UIViewController {
             let diffX = size - self.view.frame.size.width
             let diffY = self.view.frame.size.height - size
             self.logoLC.frame = CGRect(x: -(diffX/2) , y: diffY/2 , width: size, height: size)
-            self.logoLC.alpha = 0
+            
         }
         
         UIView.animate(withDuration: 1.5) {
@@ -44,7 +45,7 @@ class LaunchVC: UIViewController {
     
     private func mainPage() {
         let vc = LoginVC()
-        vc.modalTransitionStyle = .flipHorizontal
+        vc.modalTransitionStyle = .coverVertical
              vc.modalPresentationStyle = .fullScreen
              present(vc, animated: true, completion: nil)
     }
