@@ -15,7 +15,7 @@ class LaunchVC: UIViewController {
         super.viewDidLoad()
         view.addSubview(logoLC)
         view.backgroundColor = .white
-        logoLC.image = UIImage(named: "iconApp")
+        logoLC.image = UIImage(named: "logo")
         logoLC.center = view.center
         DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
             self.animate()
