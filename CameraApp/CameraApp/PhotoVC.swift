@@ -45,7 +45,32 @@ class PhotoVC: UIViewController {
         takePicBtn.backgroundColor = #colorLiteral(red: 0.401060462, green: 0.7664279342, blue: 0.6784901619, alpha: 0.8980392157)
         takePicBtn.layer.cornerRadius = 15
         takePicBtn.titleLabel?.font = .systemFont(ofSize: 20)
+        takePicBtn.addTarget(self, action: #selector(takePicture), for: .touchDown)
         view.addSubview(takePicBtn)
     }
     
+    @objc func takePicture() {
+        let camera = UIImagePickerController()
+        camera.sourceType = .camera
+        camera.delegate = self
+        present(camera, animated: true)
+    }
+    
+}
+
+extension PhotoVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        picker.dismiss(animated: true, completion: nil)
+
+        guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
+            return
+        }
+        showImage.image = image
+    }
 }
