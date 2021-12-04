@@ -20,7 +20,7 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        
+        self.hideKeyboardWhenTappedAround()
         // AppName
         mainLabel.text = "Camera App"
         mainLabel.textColor = #colorLiteral(red: 0.401073277, green: 0.7664145827, blue: 0.6784854531, alpha: 1)
@@ -59,6 +59,7 @@ class LoginVC: UIViewController {
         view.addSubview(loginButton)
         
         //TextEmpty
+        
         textEmpty.frame = CGRect(x: 50, y: 740, width: 350, height: 30)
         textEmpty.textColor = .red
         view.addSubview(textEmpty)
@@ -85,7 +86,7 @@ class LoginVC: UIViewController {
     }
     
     @objc func login(){
-        if usernameField.text == "AAA" && passwordField.text == "123" {
+        if usernameField.text!.isEmpty == false && passwordField.text!.isEmpty == false {
            
         
             let nextVC = PhotoVC()
@@ -94,7 +95,7 @@ class LoginVC: UIViewController {
             present(nextVC, animated: true, completion: nil)
             nextVC.nameLable.text = "Welcome " + usernameField.text!
                         
-        } else if usernameField.state.isEmpty == true {
+        } else {
             textEmpty.text = "Please make sure you enter your username"
         }
     }
@@ -112,4 +113,16 @@ extension UIImageView {
       self.layer.cornerRadius = self.frame.width / 2
       self.layer.masksToBounds = true
    }
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }
