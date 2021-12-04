@@ -8,15 +8,19 @@
 import UIKit
 
 class LoginVC: UIViewController {
+ 
+    let logo = UIImageView()
     let mainLabel = UILabel()
     let usernameField = UITextField()
     let passwordField = UITextField()
     let loginButton = UIButton()
     let signUpLabel = UILabel()
     let signUpButton = UIButton()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+
         // AppName
         mainLabel.text = "Camera App"
         mainLabel.textColor = #colorLiteral(red: 0.401073277, green: 0.7664145827, blue: 0.6784854531, alpha: 1)
@@ -24,6 +28,12 @@ class LoginVC: UIViewController {
         mainLabel.frame = CGRect(x: 100, y: 70, width: 230, height: 60)
         view.addSubview(mainLabel)
         
+        // Logo
+        
+        logo.frame = CGRect(x: 130, y: 300, width: 150, height: 150)
+        logo.image = UIImage(named: "logo")
+        view.addSubview(logo)
+
         //UserName
         usernameField.borderStyle = .roundedRect
         usernameField.placeholder = "Please enter your username"
@@ -71,6 +81,7 @@ class LoginVC: UIViewController {
     
     @objc func login(){
         let nextVC = PhotoVC()
+        nextVC.modalTransitionStyle = .crossDissolve
         nextVC.modalPresentationStyle = .fullScreen
         present(nextVC, animated: true, completion: nil)
     }
@@ -78,5 +89,14 @@ class LoginVC: UIViewController {
     @objc func signUp() {
         
     }
+    
 }
 
+extension UIImageView {
+
+   func setRounded() {
+     
+      self.layer.cornerRadius = self.frame.width / 2
+      self.layer.masksToBounds = true
+   }
+}

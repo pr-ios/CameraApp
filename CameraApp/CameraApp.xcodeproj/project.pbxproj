@@ -14,6 +14,7 @@
 		627BA2D32758E2D000F2EF80 /* CameraApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 627BA2D12758E2D000F2EF80 /* CameraApp.xcdatamodeld */; };
 		627BA2D52758E2D200F2EF80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 627BA2D42758E2D200F2EF80 /* Assets.xcassets */; };
 		627BA2D82758E2D200F2EF80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 627BA2D62758E2D200F2EF80 /* LaunchScreen.storyboard */; };
+		62DF689C275B9C6500664101 /* LaunchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DF689B275B9C6500664101 /* LaunchVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		627BA2D42758E2D200F2EF80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		627BA2D72758E2D200F2EF80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		627BA2D92758E2D200F2EF80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62DF689B275B9C6500664101 /* LaunchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				621C824027590DE000E15956 /* PhotoVC.swift */,
 				627BA2D42758E2D200F2EF80 /* Assets.xcassets */,
 				627BA2D62758E2D200F2EF80 /* LaunchScreen.storyboard */,
+				62DF689B275B9C6500664101 /* LaunchVC.swift */,
 				627BA2D92758E2D200F2EF80 /* Info.plist */,
 				627BA2D12758E2D000F2EF80 /* CameraApp.xcdatamodeld */,
 			);
@@ -145,6 +148,7 @@
 				627BA2C92758E2D000F2EF80 /* AppDelegate.swift in Sources */,
 				621C824127590DE000E15956 /* PhotoVC.swift in Sources */,
 				627BA2CB2758E2D000F2EF80 /* SceneDelegate.swift in Sources */,
+				62DF689C275B9C6500664101 /* LaunchVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +289,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SLGC8CG59T;
+				DEVELOPMENT_TEAM = 9QJT6B4JKB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CameraApp/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "please allow access to take a picture";
@@ -313,7 +317,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SLGC8CG59T;
+				DEVELOPMENT_TEAM = 9QJT6B4JKB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CameraApp/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "please allow access to take a picture";
