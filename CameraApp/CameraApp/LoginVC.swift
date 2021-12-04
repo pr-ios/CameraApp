@@ -45,6 +45,7 @@ class LoginVC: UIViewController {
         usernameField.borderStyle = .roundedRect
         usernameField.placeholder = "Please enter your username"
         usernameField.frame = CGRect(x: 15, y: 300, width: 400, height: 40)
+        usernameField.returnKeyType = .next
         view.addSubview(usernameField)
         
         // Password
@@ -53,6 +54,7 @@ class LoginVC: UIViewController {
         passwordField.placeholder = "Please enter your password"
         passwordField.isSecureTextEntry = true
         passwordField.frame = CGRect(x: 15, y: 350, width: 400, height: 40)
+        passwordField.returnKeyType = .done
         view.addSubview(passwordField)
         
         // LoginButton
