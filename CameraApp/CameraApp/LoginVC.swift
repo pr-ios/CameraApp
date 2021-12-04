@@ -80,10 +80,18 @@ class LoginVC: UIViewController {
     }
     
     @objc func login(){
-        let nextVC = PhotoVC()
-        nextVC.modalTransitionStyle = .crossDissolve
-        nextVC.modalPresentationStyle = .fullScreen
-        present(nextVC, animated: true, completion: nil)
+        if usernameField.text == "AAA" && passwordField.text == "123" {
+           
+        
+            let nextVC = PhotoVC()
+            nextVC.modalTransitionStyle = .partialCurl
+            nextVC.modalPresentationStyle = .fullScreen
+            present(nextVC, animated: true, completion: nil)
+            nextVC.nameLable.text = "Welcome " + usernameField.text!
+                        
+        } else {
+            
+        }
     }
     
     @objc func signUp() {
