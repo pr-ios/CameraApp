@@ -31,9 +31,9 @@ class LaunchVC: UIViewController {
     private func animate() {
         UIView.animate(withDuration: 1) {
             let size = self.view.frame.size.width * 2
-            let diffX = size - self.view.frame.size.width
-            let diffY = self.view.frame.size.height - size
-            self.logoLC.frame = CGRect(x: -(diffX/2) , y: diffY/2 , width: size, height: size)
+            let x = size - self.view.frame.size.width
+            let y = self.view.frame.size.height - size
+            self.logoLC.frame = CGRect(x: -(x/2) , y: y/2 , width: size, height: size)
             
         }
         
